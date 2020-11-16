@@ -2,38 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import "./Profile.css";
 
-const userdetails = [
-  {
-    name: "Bret",
-    title: "Username",
-  },
-  {
-    name: "sinsere@april.biz",
-    title: "email",
-  },
-  {
-    name: "999-999-999",
-    title: "phone",
-  },
-  {
-    name: "leanengraham",
-    title: "website",
-  },
-];
-const company_details = [
-  {
-    title: "Company",
-  },
-  {
-    title: "Name",
-    name: "Romaguera-Crona",
-  },
-  {
-    title: "catchPhrase",
-    name: "Multi-layered ",
-  },
-  { title: "bs", name: "harness e-market" },
-];
+
 function Profile() {
   const single_user = useSelector((state) => state);
 
