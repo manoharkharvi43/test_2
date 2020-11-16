@@ -1,0 +1,54 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accounts_container{
+    display: flex;
+      border: 1px solid black;
+      width: 600px;
+      height: 550px;
+      border-radius: 19px;
+      padding: 10px;
+      align-items: center;
+      flex-direction: column;
+   
+}
+
+.account_header{
+    display: flex;
+   width: 600px;
+   justify-content: center;
+   align-items: center;
+   background-color:  rgb(139, 139, 139, 0.2);
+   height: 100px;
+ 
+}
+
+.account_body{
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 580px;
+    padding-left: 40px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
