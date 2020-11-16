@@ -13,9 +13,6 @@ function App() {
         <div>
             {show_home ?<Homepage/> : <Accountpage acc_selected={ ()=> account_selected()}/>}
 
-           
-    
-            
         </div>
     )
 }

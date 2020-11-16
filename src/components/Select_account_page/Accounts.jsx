@@ -11,9 +11,8 @@ function Accounts(props) {
         <>
         <div className='account_container' onClick={click_handler}>
 
-            <div className='img_container'>
-           <img src={props.img_url} width='35px' height='35px'></img>
-            </div>
+           <img src={props.img_url} width='35px' height='35px' style={{borderRadius:'50%',marginTop:'10px'}}></img>
+           
             <div className='name_container'>
             <p style={{cursor:'pointer'}}>{props.name}</p>
             </div>

@@ -24,21 +24,13 @@ function Homepage() {
 
                     <div className="display">
                     <Switch>
-                     <Route path='/profile' component={Profile} ></Route>
-                     <Route path='/todo'  > <Todo name='todo'/></Route>
+                     <Route path='/profile'> <Profile/></Route>
+                     <Route path='/todo'> <Todo name='todo'/></Route>
                        <Route path='/posts'> <Todo name='posts' /></Route>
                      <Route path='/gallery'> <Todo name='gallery' /></Route>
                  </Switch>
                     </div>
-                   
-           
-                    
-
              </div>
-
-
-             
-           
         </div>
         </>
     )

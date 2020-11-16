@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import './Profile.css'
 
 
@@ -36,22 +37,30 @@ const company_details=[{
             
         }]
 function Profile() {
+    
+
+    const single_user = useSelector(state =>state)
+
+    console.log('single',single_user)
     return (
         <>
-        <div style={{  display: "block"}}>
+        <div >
 
        
         <div className='profile_container'>
 
-            <div className='profile_header'>
+            <div className='profile_header' >
             <h4 style={{marginLeft:'30px'}}>profile</h4> 
 
-            <div className='profile_img'>
-            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJm0gAXunXcm3HezBOW5XyULCkkdCxQ95_XA&usqp=CAU' 
-                  alt='loading'width='30px' height='30px' style={{borderRadius:'100%',marginTop:'30px'}} />
-                  <div className='profile_name'>
-                  <h4 >name...</h4>
-                  </div>
+            <div className='profile_img' onClick={() => alert(  `loged in as ${single_user.users.map(data=>data.name)}`)} >
+            
+                <img src={single_user.users.map(data=>data.profilepicture)} 
+                  alt='loading'width='40px' height='40px' style={{borderRadius:'100%'}} />
+            
+               
+                <div className='profile_name'>
+                    <h6 >{single_user.users.map(data=>data.name)} </h6>
+                    </div>
               
             </div>
 
@@ -60,19 +69,31 @@ function Profile() {
             <div className='profile_body_1'>
               
               
-                  <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJm0gAXunXcm3HezBOW5XyULCkkdCxQ95_XA&usqp=CAU' 
-                  alt='loading'width='200px' height='200px' style={{borderRadius:'100%',marginTop:'30px'}} />
+                  <img src={single_user.users.map(data=>data.profilepicture)}  
+                  alt='loading'width='200px' height='200px' style={{borderRadius:'100%'}} />
 
-                  <h3 style={{color:'#424141'}} className='username'>user name</h3>
+                  <h3 style={{color:'#424141'}} className='username'>{single_user.users.map(data=>data.name)}  </h3>
       
 
                   <div className='user_details'>
                       <table>
-                          {userdetails.map(data=>
+                          {single_user.users.map(data=>
                             <>
                               <tr style={{marginBottom:'10px'}}>
-                          <td style={{marginRight:'0px'}}><span style={{color:'grey',fontSize:'25px'}}>{data.title} :</span></td>
-                          <th><span style={{color:'#474747',fontSize:'25px'}}>{data.name}</span></th>
+                          <td style={{marginRight:'0px'}}><span style={{color:'grey',fontSize:'25px'}}>username :</span></td>
+                          <th><span style={{color:'#474747',fontSize:'25px'}}>{data.username} </span></th>
+                           </tr>
+                           <tr style={{marginBottom:'10px'}}>
+                          <td style={{marginRight:'0px'}}><span style={{color:'grey',fontSize:'25px'}}>email:</span></td>
+                          <th><span style={{color:'#474747',fontSize:'25px'}}>{data.email} </span></th>
+                           </tr>
+                           <tr style={{marginBottom:'10px'}}>
+                          <td style={{marginRight:'0px'}}><span style={{color:'grey',fontSize:'25px'}}>phone:</span></td>
+                          <th><span style={{color:'#474747',fontSize:'25px'}}>{data.phone} </span></th>
+                           </tr>
+                           <tr style={{marginBottom:'10px'}}>
+                          <td style={{marginRight:'0px'}}><span style={{color:'grey',fontSize:'25px'}}>website:</span></td>
+                          <th><span style={{color:'#474747',fontSize:'25px'}}>{data.website} </span></th>
                            </tr>
                             </>
                             )}  
@@ -81,13 +102,25 @@ function Profile() {
                   </div>
                   <div className='company_details'>
                   <table>
-                          {company_details.map(data=>
+                          <tr>
+                          <td style={{marginRight:'10px'}}><span style={{color:'grey',fontSize:'25px'}}>company</span></td>
+                          </tr>
+                          {single_user.users.map(data=>
                             <>
                               <tr style={{marginBottom:'10px'}}>
-                          <td style={{marginRight:'10px'}}><span style={{color:'grey',fontSize:'25px'}}>{data.title}:</span></td>
-                          <th><span style={{color:'#474747',fontSize:'25px'}}>{data.name}</span></th>
+                          <td style={{marginRight:'10px'}}><span style={{color:'grey',fontSize:'25px'}}>Name:</span></td>
+                          <th><span style={{color:'#474747',fontSize:'25px'}}>{data.company.name}</span></th>
+                           </tr>
+                           <tr style={{marginBottom:'10px'}}>
+                          <td style={{marginRight:'10px'}}><span style={{color:'grey',fontSize:'25px'}}>catchPhrase:</span></td>
+                          <th><span style={{color:'#474747',fontSize:'25px'}}>{data.company.catchPhrase}</span></th>
+                           </tr>
+                           <tr style={{marginBottom:'10px'}}>
+                          <td style={{marginRight:'10px'}}><span style={{color:'grey',fontSize:'25px'}}>bs:</span></td>
+                          <th><span style={{color:'#474747',fontSize:'25px'}}>{data.company.bs}</span></th>
                            </tr>
                             </>
+
                             )}  
                       </table>
                   </div>
@@ -107,8 +140,3 @@ function Profile() {
 
 export default Profile
 
-{/* <h4 style={{color:'grey',display:"flex",flexDirection:'row',justifyContent:'space-between'}}>
-username:  <h4 style={{color:'black'}}>jkhbv</h4></h4>
-<span><p>username</p> <h6>ghfyudgf</h6></span>
-<span><p>username</p> <h6>ghfyudgf</h6></span>
-<span><p>username</p> <h6>ghfyudgf</h6></span> */}

@@ -1,35 +1,36 @@
-import Axios from 'axios'
+
 import React, { useEffect, useState } from 'react'
 import './Accountpage.css'
 import Accounts from './Accounts'
-import axios from 'axios';
 import  {useDispatch, useSelector} from 'react-redux'
-import { useHistory } from 'react-router-dom';
-
+import  all_user from '../../Redux/Actions/All_users'
+import select_user from '../../Redux/Actions/Select_user';
+import { useHistory } from 'react-router-dom'
 
 
 function Accountpage(props) {
-    const [users ,setusers] = useState([])
-    const history = useHistory()
+   const history = useHistory()
+   const dispatch = useDispatch()
 
+
+   const users_all = useSelector(state =>state)
+   console.log(users_all)
   
 
-    const fetchdata = () =>{
-            axios.get('https://panorbit.in/api/users.json')
-          .then(response =>{ setusers(response.data.users)
-        console.log(response.data.users)})
-    .then(err =>console.log(err))
-                    }
-
     useEffect(() =>{ 
-        fetchdata()
-    },[])
-
-
-  const click_handler = (name) =>{
-    props.acc_selected()
-   
+         dispatch(all_user())
+      
+    },[dispatch])
+    
+    const click_handler = (user) =>{
+        console.log(user)
+        dispatch(select_user(user)) 
+    }
+  const account_selected =() =>{
+      props.acc_selected()
   }
+
+ 
 
     return (
         <>
@@ -38,15 +39,17 @@ function Accountpage(props) {
                 <div className='account_header'>
                      <h4>select an acccont</h4>
                 </div>
-                <div className='account_body' >
-                    { users && users.map(user => 
-                        <div key={user.id}  >
-                         <Accounts name={user.name} 
-              
-                         clickable={()=>click_handler(user.name)}
-                          img_url={user.profilepicture} />
-                        </div>
-                        )}
+                <div className='account_body'  > 
+                 { users_all ? users_all.users.map(data => 
+                    <>
+                 <div key={data.id} onClick={account_selected} >
+                  <Accounts name={data.name} 
+                  clickable={()=>click_handler(data)}
+                   img_url={data.profilepicture} />
+                 </div>
+                 </>
+                    ) :null}
+               
                 </div>
              </div>
         </div>
@@ -55,3 +58,4 @@ function Accountpage(props) {
 }
 
 export default Accountpage
+
