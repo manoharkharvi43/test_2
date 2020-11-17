@@ -3,6 +3,7 @@ import './Homepage.css'
 import {Link,Route,Switch} from 'react-router-dom'
 import Profile from '../main_comps/Profile'
 import Todo from '../main_comps/Todo'
+import Accountpage from '../Select_account_page/Accountpage'
 
 function Homepage() {
     return (
@@ -28,6 +29,7 @@ function Homepage() {
                      <Route path='/todo'> <Todo name='todo'/></Route>
                        <Route path='/posts'> <Todo name='posts' /></Route>
                      <Route path='/gallery'> <Todo name='gallery' /></Route>
+                     <Route path='/selectaccount'><Accountpage/></Route>
                  </Switch>
                     </div>
              </div>

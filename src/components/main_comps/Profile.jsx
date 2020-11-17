@@ -118,7 +118,7 @@ function Profile() {
 								<tbody>
 									<tr>
 										<td style={{ marginRight: "10px" }}>
-											<span style={{ color: "grey" }}>company</span>
+											<span style={{ color: "grey" }}>Company</span>
 										</td>
 									</tr>
 								</tbody>
