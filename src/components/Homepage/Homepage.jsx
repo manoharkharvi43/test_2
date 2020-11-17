@@ -14,10 +14,10 @@ function Homepage() {
                  
                     <div className='navigate_btn'>
                        <ul >
-                          <h5><li className='list'><Link to='/profile' style={{color:'white' ,textDecoration:'none'}}>Profile</Link></li></h5>
-                          <h5><li className='list'><Link to='/posts' style={{color:'white' ,textDecoration:'none'}}>Posts</Link></li></h5>
-                          <h5><li className='list'><Link to='/gallery' style={{color:'white' ,textDecoration:'none'}}>Gallery</Link></li></h5>
-                          <h5><li className='list'><Link to='/todo' style={{color:'white' ,textDecoration:'none'}}>Todo</Link></li></h5>
+                          <h5><li className='list' key='1'><Link to='/profile' style={{color:'white' ,textDecoration:'none'}} className='navbar_item' >Profile</Link></li></h5>
+                          <h5><li className='list' key='2'><Link to='/posts' style={{color:'white' ,textDecoration:'none'}} className='navbar_item'>Posts</Link></li></h5>
+                          <h5><li className='list' key='3'><Link to='/gallery' style={{color:'white' ,textDecoration:'none'}} className='navbar_item'>Gallery</Link></li></h5>
+                          <h5><li className='list' key='4'><Link to='/todo' style={{color:'white' ,textDecoration:'none'}} className='navbar_item'>Todo</Link></li></h5>
                        </ul>
                     </div>
 

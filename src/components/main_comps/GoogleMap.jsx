@@ -8,7 +8,7 @@ const LocationMap = (props) => {
 
 	return (
 		<>
-			<LoadScript googleMapsApiKey="AIzaSyDyOQ2YwWVJIKH9DyFj8zUa_qlJhrn2Bq0">
+			<LoadScript googleMapsApiKey={props.api}>
 				<GoogleMap
 					mapContainerStyle={mapStyles}
 					zoom={13}

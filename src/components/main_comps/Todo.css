@@ -1,34 +1,34 @@
 .comps_container {
-  display: grid;
-  width: 100%;
-  height: 100vh;
-  grid-template-columns: 100%;
-  grid-template-rows: 10% 85%;
+	display: grid;
+	width: 100%;
+	height: 100vh;
+	grid-template-columns: 100%;
+	grid-template-rows: 10% 85%;
 }
 
 .todo_head {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #d9d4d4;
-  margin-left: 20px;
-  margin-right: 20px;
+	grid-column: 1/2;
+	grid-row: 1/2;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #d9d4d4;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 .todo_profile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  width: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	width: 250px;
 }
 
 .coming_soon {
-  grid-column: 1/2;
-  grid-row: 2/2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	grid-column: 1/2;
+	grid-row: 2/2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

@@ -1,23 +1,23 @@
 .account_container {
-  margin: 0px;
-  border-bottom: 1px solid grey;
-  width: 500px;
-  height: 50px;
-  display: flex;
-  flex-direction: row;
+	margin: 0px;
+	border-bottom: 1px solid grey;
+	width: 500px;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
 }
 
 .img_container {
-  height: 35px;
-  width: 35px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 30px;
+	height: 35px;
+	width: 35px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 30px;
 }
 .name_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 5%;
 }
