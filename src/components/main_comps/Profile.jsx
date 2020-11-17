@@ -1,6 +1,8 @@
+
 import React from "react";
 import { useSelector } from "react-redux";
-import "./Profile.css";
+import "./Profile.css"
+import LocationMap from '../main_comps/GoogleMap'
 
 
 function Profile() {
@@ -159,6 +161,7 @@ function Profile() {
           </div>
 
           <div className="profile_body_2">
+
             <table>
             <tr>
                   <td style={{ marginRight: "10px" }}>
@@ -224,6 +227,14 @@ function Profile() {
                     </>
           ))}
             </table>
+
+            <div className="map_container">
+                {single_user.users.map(data=>  
+                    <>
+                    <LocationMap  lat={data.address.geo.lat} lat={data.address.geo.lng}  />
+                    </>)}
+              
+            </div>
              
           </div>
         </div>
