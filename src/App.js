@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link, Route, Switch } from "react-router-dom";
 import Homepage from "./components/Homepage/Homepage";
 import Accountpage from "./components/Select_account_page/Accountpage";
 

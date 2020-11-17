@@ -55,48 +55,48 @@ function Profile() {
                   <>
                     <tr style={{ marginBottom: "10px" }}>
                       <td style={{ marginRight: "0px" }}>
-                        <span style={{ color: "grey", fontSize: "25px" }}>
+                        <span style={{ color: "grey" }}>
                           username :
                         </span>
                       </td>
                       <th>
-                        <span style={{ color: "#474747", fontSize: "25px" }}>
+                        <span style={{ color: "#474747" }}>
                           {data.username}{" "}
                         </span>
                       </th>
                     </tr>
                     <tr style={{ marginBottom: "10px" }}>
                       <td style={{ marginRight: "0px" }}>
-                        <span style={{ color: "grey", fontSize: "25px" }}>
+                        <span style={{ color: "grey" }}>
                           email:
                         </span>
                       </td>
                       <th>
-                        <span style={{ color: "#474747", fontSize: "25px" }}>
+                        <span style={{ color: "#474747" }}>
                           {data.email}{" "}
                         </span>
                       </th>
                     </tr>
                     <tr style={{ marginBottom: "10px" }}>
                       <td style={{ marginRight: "0px" }}>
-                        <span style={{ color: "grey", fontSize: "25px" }}>
+                        <span style={{ color: "grey" }}>
                           phone:
                         </span>
                       </td>
                       <th>
-                        <span style={{ color: "#474747", fontSize: "25px" }}>
+                        <span style={{ color: "#474747" }}>
                           {data.phone}{" "}
                         </span>
                       </th>
                     </tr>
                     <tr style={{ marginBottom: "10px" }}>
                       <td style={{ marginRight: "0px" }}>
-                        <span style={{ color: "grey", fontSize: "25px" }}>
+                        <span style={{ color: "grey" }}>
                           website:
                         </span>
                       </td>
                       <th>
-                        <span style={{ color: "#474747", fontSize: "25px" }}>
+                        <span style={{ color: "#474747" }}>
                           {data.website}{" "}
                         </span>
                       </th>
@@ -109,7 +109,7 @@ function Profile() {
               <table>
                 <tr>
                   <td style={{ marginRight: "10px" }}>
-                    <span style={{ color: "grey", fontSize: "25px" }}>
+                    <span style={{ color: "grey" }}>
                       company
                     </span>
                   </td>
@@ -118,36 +118,36 @@ function Profile() {
                   <>
                     <tr style={{ marginBottom: "10px" }}>
                       <td style={{ marginRight: "10px" }}>
-                        <span style={{ color: "grey", fontSize: "25px" }}>
+                        <span style={{ color: "grey" }}>
                           Name:
                         </span>
                       </td>
                       <th>
-                        <span style={{ color: "#474747", fontSize: "25px" }}>
+                        <span style={{ color: "#474747" }}>
                           {data.company.name}
                         </span>
                       </th>
                     </tr>
                     <tr style={{ marginBottom: "10px" }}>
                       <td style={{ marginRight: "10px" }}>
-                        <span style={{ color: "grey", fontSize: "25px" }}>
+                        <span style={{ color: "grey" }}>
                           catchPhrase:
                         </span>
                       </td>
                       <th>
-                        <span style={{ color: "#474747", fontSize: "25px" }}>
+                        <span style={{ color: "#474747" }}>
                           {data.company.catchPhrase}
                         </span>
                       </th>
                     </tr>
                     <tr style={{ marginBottom: "10px" }}>
                       <td style={{ marginRight: "10px" }}>
-                        <span style={{ color: "grey", fontSize: "25px" }}>
+                        <span style={{ color: "grey"}}>
                           bs:
                         </span>
                       </td>
                       <th>
-                        <span style={{ color: "#474747", fontSize: "25px" }}>
+                        <span style={{ color: "#474747" }}>
                           {data.company.bs}
                         </span>
                       </th>
@@ -158,7 +158,74 @@ function Profile() {
             </div>
           </div>
 
-          <div className="profile_body_2"></div>
+          <div className="profile_body_2">
+            <table>
+            <tr>
+                  <td style={{ marginRight: "10px" }}>
+                    <span style={{ color: "grey" }}>
+                     Address
+                    </span>
+                  </td>
+                </tr>
+          {single_user.users.map((data) => (
+            <>
+          <tr style={{ marginBottom: "10px" }}>
+                      <td style={{ marginRight: "30px" }}>
+                        <span style={{ color: "grey"}}>
+                          Street:
+                        </span>
+                      </td>
+                      <th>
+                        <span style={{ color: "#474747" }}>
+                          {data.address.street}
+                        </span>
+                      </th>
+                    </tr>
+
+                    <tr style={{ marginBottom: "10px" }}>
+                      <td style={{ marginRight: "30px" }}>
+                        <span style={{ color: "grey"}}>
+                        Suite:
+                        </span>
+                      </td>
+                      <th>
+                        <span style={{ color: "#474747" }}>
+                          {data.address.suite}
+                        </span>
+                      </th>
+                    </tr>
+
+                    <tr style={{ marginBottom: "10px" }}>
+                      <td style={{ marginRight: "30px" }}>
+                        <span style={{ color: "grey"}}>
+                        City:
+                        </span>
+                      </td>
+                      <th>
+                        <span style={{ color: "#474747" }}>
+                          {data.address.city}
+                        </span>
+                      </th>
+                    </tr>
+
+                    <tr style={{ marginBottom: "10px" }}>
+                      <td style={{ marginRight: "30px" }}>
+                        <span style={{ color: "grey"}}>
+                        Zipcode:
+                        </span>
+                      </td>
+                      <th>
+                        <span style={{ color: "#474747" }}>
+                          {data.address.zipcode}
+                        </span>
+                      </th>
+                    </tr>
+                    
+                    </>
+          ))}
+            </table>
+             
+          </div>
         </div>
       </div>
     </>
