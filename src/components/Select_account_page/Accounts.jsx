@@ -14,6 +14,7 @@ function Accounts(props) {
 					width="35px"
 					height="35px"
 					style={{ borderRadius: "50%", marginTop: "10px" }}
+					alt='loading'
 				></img>
 
 				<div className="name_container">

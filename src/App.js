@@ -8,13 +8,15 @@ function App() {
     set_show_home(true);
   };
   return (
-    <div>
+    <>
+   
       {show_home ? (
         <Homepage />
       ) : (
         <Accountpage acc_selected={() => account_selected()} />
       )}
-    </div>
+   
+    </>
   );
 }
 

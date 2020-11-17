@@ -4,10 +4,10 @@ import Accounts from "./Accounts";
 import { useDispatch, useSelector } from "react-redux";
 import all_user from "../../Redux/Actions/All_users";
 import select_user from "../../Redux/Actions/Select_user";
-import { useHistory } from "react-router-dom";
+
 
 function Accountpage(props) {
-	const history = useHistory();
+
 	const dispatch = useDispatch();
 
 	const users_all = useSelector((state) => state);

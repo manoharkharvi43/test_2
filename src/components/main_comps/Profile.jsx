@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import "./Profile.css";
 import LocationMap from "../main_comps/GoogleMap";
 import { BsChatSquare } from "react-icons/bs";
+import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 
 function Profile() {
 	const single_user = useSelector((state) => state);
@@ -235,7 +236,7 @@ function Profile() {
 									<LocationMap
 										api="AIzaSyDyOQ2YwWVJIKH9DyFj8zUa_qlJhrn2Bq0"
 										lat={data.address.geo.lat}
-										lat={data.address.geo.lng}
+										lng={data.address.geo.lng}
 									/>
 								</>
 							))}
@@ -251,6 +252,20 @@ function Profile() {
 								style={{ margin: "10px" }}
 							/>
 							<h5 style={{ color: "#c8cbcf", margin: "2%" }}>Chats</h5>
+
+							{toggle_chat ? (
+								<MdKeyboardArrowDown
+									size={26}
+									color="#c8cbcf"
+									style={{ marginLeft: "30%" }}
+								/>
+							) : (
+								<MdKeyboardArrowUp
+									size={26}
+									color="#c8cbcf"
+									style={{ marginLeft: "30%" }}
+								/>
+							)}
 						</div>
 					</div>
 				</div>
